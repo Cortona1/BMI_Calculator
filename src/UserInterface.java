@@ -36,16 +36,32 @@ public class UserInterface {
             if (userInput.toLowerCase().equals("no")) {
                 break;
             } else {
-                System.out.print("Please enter the first part of your height in feet: ");
-                int userFeet = Integer.parseInt(reader.nextLine());
-                System.out.print("Please enter the second part of your height in inches: ");
-                int userInches = Integer.parseInt(reader.nextLine());
-                System.out.print("Now please enter your weight in pounds: ");
-                double userWeight = Double.parseDouble(reader.nextLine());
-                double BMI = userStats(userFeet,userInches,userWeight);
-                System.out.println("Your BMI is " + String.format("%.2f",BMI) + ".");
+                askUser();
             }
         }
+    }
+
+    public void askUser(){
+        System.out.print("Please enter the first part of your height in feet: ");
+        int userFeet = 0;
+
+        while (true) {
+            try {
+                userFeet = Integer.parseInt(reader.nextLine());
+                break;
+            } catch (Exception e) {
+                System.out.print("\nPlease try again to enter a number (Hint enter 1 not" +
+                        " \"one\"): ");
+            }
+        }
+
+
+        System.out.print("Please enter the second part of your height in inches: ");
+        int userInches = Integer.parseInt(reader.nextLine());
+        System.out.print("Now please enter your weight in pounds: ");
+        double userWeight = Double.parseDouble(reader.nextLine());
+        double BMI = userStats(userFeet,userInches,userWeight);
+        System.out.println("Your BMI is " + String.format("%.2f",BMI) + ".");
     }
 
     public static double userStats(double feet, double inches, double weight) {
