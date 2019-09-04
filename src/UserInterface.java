@@ -5,12 +5,10 @@ public class UserInterface {
 
     private Scanner reader;
 
-
     public UserInterface(Scanner reader) {
         this.reader = reader;
 
     }
-
 
     public void start() {
         introductions();
@@ -18,15 +16,12 @@ public class UserInterface {
         conclusion();
     }
 
-
     public void introductions() {
         System.out.println("\n*************************************************\n      " +
                 "This program will calculate your BMI\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" +
                 "\n*********************************" +
                 "****************" +
                 "");
-
-
     }
 
     public void userDecision() {
@@ -48,9 +43,6 @@ public class UserInterface {
                 "\n*********************************" +
                 "****************" +
                 "");
-
-
-
     }
 
     public void askUser(){
