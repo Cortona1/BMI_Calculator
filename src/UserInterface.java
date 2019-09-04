@@ -24,6 +24,14 @@ public class UserInterface {
                 "");
     }
 
+    public void conclusion() {
+        System.out.println("\n*************************************************\n      " +
+                "       Thanks for testing! ^_^\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" +
+                "\n*********************************" +
+                "****************" +
+                "");
+    }
+
     public void userDecision() {
         System.out.println("If you would like the program to run input yes otherwise type \"no\" to quit");
 
@@ -35,14 +43,6 @@ public class UserInterface {
                 askUser();
             }
         }
-    }
-
-    public void conclusion() {
-        System.out.println("\n*************************************************\n      " +
-                "       Thanks for testing! ^_^\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" +
-                "\n*********************************" +
-                "****************" +
-                "");
     }
 
     public void askUser(){
